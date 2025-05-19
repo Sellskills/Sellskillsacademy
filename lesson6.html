@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SellSkills Academy - Leçon 6</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="lesson">
+  <div class="lesson-container">
+    <h1>Leçon 6 : Créer l’effet WOW après le dépôt pour renforcer la confiance</h1>
+    <p id="userNameDisplay" class="user-name"></p>
+
+    <section class="objectives">
+      <h2>🎯 Objectifs pédagogiques</h2>
+      <ul>
+        <li>Savoir quoi dire et faire immédiatement après le dépôt</li>
+        <li>Créer une expérience positive et marquante pour le client</li>
+        <li>Renforcer la crédibilité de l’entreprise et du conseiller</li>
+      </ul>
+    </section>
+
+    <section class="content">
+      <h2>🧠 Pourquoi l’étape post-dépôt est cruciale</h2>
+      <p>Le moment qui suit le dépôt est un moment de doute pour le client. Il vient de transférer de l’argent et attend d’être rassuré. Si tu ne maîtrises pas cette phase, il peut regretter, stresser, ou se déconnecter.</p>
+      <p>Un bon agent sait transformer ce moment en **expérience positive**, où le client se dit : <strong>“J’ai bien fait de faire confiance.”</strong></p>
+    </section>
+
+    <section>
+      <h2>✅ Que faire juste après le dépôt ?</h2>
+      <ul>
+        <li>✔️ Féliciter avec chaleur : “Excellente décision, vous venez d’activer votre premier pas vers une gestion intelligente de votre capital.”</li>
+        <li>✔️ Donner de la visibilité : “Voici ce que vous allez voir apparaître dans votre espace client…”</li>
+        <li>✔️ Valoriser l’action du client : “95 % des personnes hésitent. Vous, vous êtes passé à l’action. Bravo.”</li>
+        <li>✔️ Proposer un accompagnement immédiat : “Je reste avec vous pour paramétrer la stratégie IA.”</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💬 Scénarios post-dépôt avec effet WOW</h2>
+
+      <div class="scenario">
+        <strong style="color:#d32f2f;">Client :</strong> « C’est bon, j’ai fait le dépôt. »<br />
+        <strong style="color:#2e7d32;">Agent :</strong> « Parfait, et félicitations. Peu de gens passent à l’action du premier coup. Vous êtes déjà dans le top 5 % des profils les plus engagés. Je vous explique ce qui se passe maintenant. »<br />
+        <strong style="color:#2e7d32;">Agent :</strong> « Dans 2 minutes, vous aurez accès à la configuration de votre stratégie IA. Vous préférez que je vous guide ou vous testez seul ? »<br />
+      </div>
+
+      <div class="scenario">
+        <strong style="color:#d32f2f;">Client :</strong> « Voilà, c’est envoyé. »<br />
+        <strong style="color:#2e7d32;">Agent :</strong> « Très bon choix. Vous venez d’activer une stratégie qui travaille pendant que vous dormez. Je vous accompagne maintenant pour paramétrer les préférences. »<br />
+      </div>
+    </section>
+
+    <section>
+      <h2>🚀 Script professionnel à appliquer</h2>
+      <p><strong>“Merci pour votre confiance, [Prénom]. Vous venez de faire ce que la majorité n’ose pas : agir. Je vais faire en sorte que votre première expérience soit claire, simple et satisfaisante.”</strong></p>
+    </section>
+
+    <section>
+      <h2>⚠️ Ce qu’il faut absolument éviter</h2>
+      <ul>
+        <li>❌ Devenir distant ou robotique après le dépôt</li>
+        <li>❌ Laisser le client seul sans direction</li>
+        <li>❌ Ne pas valoriser le courage du client</li>
+      </ul>
+    </section>
+
+    <section class="quiz">
+      <h2>📝 Quiz de validation</h2>
+      <form id="quizForm">
+        <p>1. Quelle est la bonne réaction juste après un dépôt ?</p>
+        <label><input type="radio" name="q1" value="a"> “Ok c’est noté. Bonne journée.”</label>
+        <label><input type="radio" name="q1" value="b"> “Bravo, je vous accompagne maintenant pour activer la stratégie.”</label>
+        <label><input type="radio" name="q1" value="c"> “Je vous envoie un lien demain.”</label>
+
+        <p>2. Pourquoi le moment post-dépôt est important ?</p>
+        <label><input type="radio" name="q2" value="a"> Car c’est là que le client peut recommander</label>
+        <label><input type="radio" name="q2" value="b"> Car c’est là que la relation se construit ou se casse</label>
+        <label><input type="radio" name="q2" value="c"> Car c’est là que commence la rétention</label>
+
+        <p>3. Quelle erreur faut-il éviter ?</p>
+        <label><input type="radio" name="q3" value="a"> Féliciter le client</label>
+        <label><input type="radio" name="q3" value="b"> Être trop distant et vague après le paiement</label>
+        <label><input type="radio" name="q3" value="c"> Guider le client vers la suite</label>
+
+        <button type="button" onclick="validateQuiz()">Valider</button>
+      </form>
+      <div id="result"></div>
+      <button onclick="location.href='lesson7.html'">➡️ Passer à la leçon suivante</button>
+    </section>
+  </div>
+
+  <script>
+    function validateQuiz() {
+      const answers = { q1: 'b', q2: 'b', q3: 'b' };
+      let score = 0;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) score++;
+      }
+      document.getElementById('result').innerHTML = `<p><strong>Score : ${score}/3</strong></p>`;
+    }
+
+    const userName = localStorage.getItem('studentName');
+    if (userName) {
+      document.getElementById('userNameDisplay').textContent = `👋 Bonjour ${userName}, bienvenue dans la leçon 6.`;
+    }
+  </script>
+</body>
+</html>

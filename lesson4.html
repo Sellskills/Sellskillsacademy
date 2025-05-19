@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SellSkills Academy - Leçon 4</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="lesson">
+  <div class="lesson-container">
+    <h1>Leçon 4 : Structurer un appel de conversion de A à Z</h1>
+    <p id="userNameDisplay" class="user-name"></p>
+
+    <section class="objectives">
+      <h2>🎯 Objectifs pédagogiques</h2>
+      <ul>
+        <li>Suivre une trame claire pour ne jamais perdre le contrôle</li>
+        <li>Qualifier le client efficacement</li>
+        <li>Conduire l’appel jusqu’au dépôt sans improvisation</li>
+      </ul>
+    </section>
+
+    <section class="content">
+      <h2>🧠 Pourquoi structurer son appel est vital</h2>
+      <p>Un agent qui improvise devient un simple bavard. Un agent qui suit une trame devient un professionnel.</p>
+      <p>Le but est de garder la maîtrise du déroulé, de réduire les “blancs” et de guider le client vers une action concrète (le dépôt de 250€ minimum).</p>
+    </section>
+
+    <section>
+      <h2>📊 Trame d’un appel de conversion structuré</h2>
+      <ul>
+        <li><strong>1. Accroche directe</strong> : “Bonjour, je suis votre conseiller IA. J’ai deux minutes pour vous.”</li>
+        <li><strong>2. Cadrage</strong> : “L’objectif de cet appel, c’est de vous faire démarrer aujourd’hui avec un dépôt minimum et une stratégie active.”</li>
+        <li><strong>3. Qualification</strong> : “Est-ce que vous avez déjà investi ? Quel est votre objectif principal : rendement, sécurité, apprentissage ?”</li>
+        <li><strong>4. Présentation simple</strong> : “Notre IA travaille 24/24 sur plusieurs marchés, le tout activable dès 250€.”</li>
+        <li><strong>5. Détection d’objection</strong> : “Qu’est-ce qui vous bloquerait pour commencer aujourd’hui ?”</li>
+        <li><strong>6. Gestion d’objection</strong> : écouter, reformuler, rassurer (cf. Leçon 3)</li>
+        <li><strong>7. Closing</strong> : “On passe au dépôt maintenant, je vous accompagne.”</li>
+      </ul>
+    </section>
+
+    <section class="scenarios">
+      <h2>📞 Scénarios d’appel complet structuré</h2>
+
+      <div class="scenario">
+        <strong style="color:#2e7d32;">Agent :</strong> “Bonjour Monsieur Jean, je suis votre conseiller IA. J’ai 2 minutes pour vous faire gagner du temps et de l’argent, c’est ok pour vous ?”<br />
+        <strong style="color:#d32f2f;">Client :</strong> “Oui allez-y.”<br />
+        <strong style="color:#2e7d32;">Agent :</strong> “L’objectif ici, c’est de vous faire démarrer aujourd’hui avec 250€, sur une stratégie IA automatisée. Est-ce que vous avez déjà investi ?”<br />
+        <strong style="color:#d32f2f;">Client :</strong> “Un peu, en crypto.”<br />
+        <strong style="color:#2e7d32;">Agent :</strong> “Parfait, vous êtes donc déjà dans une logique rendement. L’IA qu’on utilise fonctionne sur Forex, crypto, indices. Vous êtes plus prudent ou agressif ?”<br />
+        <strong style="color:#d32f2f;">Client :</strong> “Plutôt prudent.”<br />
+        <strong style="color:#2e7d32;">Agent :</strong> “Excellent. Avec un profil modéré, vous activez une stratégie à faible exposition dès 250€. On démarre ensemble maintenant ?”<br />
+        <strong style="color:#d32f2f;">Client :</strong> “Oui, on fait ça.”<br />
+        <strong style="color:#2e7d32;">Agent :</strong> “Super. Je vous envoie le lien de dépôt sécurisé et je vous guide.”<br />
+      </div>
+    </section>
+
+    <section>
+      <h2>✅ Astuces à appliquer durant l’appel</h2>
+      <ul>
+        <li>Poser des questions ouvertes pour garder la dynamique</li>
+        <li>Reformuler pour montrer que vous écoutez activement</li>
+        <li>Ne jamais attendre que le client pose la question du dépôt : anticipez-le</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📋 Script modèle à mémoriser</h2>
+      <p><strong>“Bonjour [Prénom], je suis votre conseiller IA. Mon objectif est que vous puissiez activer aujourd’hui une stratégie intelligente avec 250€, et je vais vous guider de A à Z. Vous avez 2 minutes ?”</strong></p>
+    </section>
+
+    <section class="quiz">
+      <h2>📝 Quiz de validation</h2>
+      <form id="quizForm">
+        <p>1. Pourquoi faut-il structurer son appel ?</p>
+        <label><input type="radio" name="q1" value="a"> Pour improviser efficacement</label>
+        <label><input type="radio" name="q1" value="b"> Pour garder le contrôle et amener au dépôt</label>
+        <label><input type="radio" name="q1" value="c"> Pour avoir l’air professionnel</label>
+
+        <p>2. Quand parler du dépôt minimum ?</p>
+        <label><input type="radio" name="q2" value="a"> En toute fin d’appel</label>
+        <label><input type="radio" name="q2" value="b"> Dès que possible, après qualification</label>
+        <label><input type="radio" name="q2" value="c"> Si le client le demande</label>
+
+        <p>3. Comment cadrer l’appel ?</p>
+        <label><input type="radio" name="q3" value="a"> En posant des questions générales</label>
+        <label><input type="radio" name="q3" value="b"> En annonçant l’objectif dès le départ</label>
+        <label><input type="radio" name="q3" value="c"> En laissant le client choisir le sujet</label>
+
+        <button type="button" onclick="validateQuiz()">Valider</button>
+      </form>
+      <div id="result"></div>
+      <button onclick="location.href='lesson5.html'">➡️ Passer à la leçon suivante</button>
+    </section>
+  </div>
+
+  <script>
+    function validateQuiz() {
+      const answers = { q1: 'b', q2: 'b', q3: 'b' };
+      let score = 0;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) score++;
+      }
+      document.getElementById('result').innerHTML = `<p><strong>Score : ${score}/3</strong></p>`;
+    }
+
+    const userName = localStorage.getItem('studentName');
+    if (userName) {
+      document.getElementById('userNameDisplay').textContent = `👋 Bonjour ${userName}, bienvenue dans la leçon 4.`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SellSkills Academy - Leçon 5</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="lesson">
+  <div class="lesson-container">
+    <h1>Leçon 5 : Maîtriser l’art du closing – Obtenir le dépôt</h1>
+    <p id="userNameDisplay" class="user-name"></p>
+
+    <section class="objectives">
+      <h2>🎯 Objectifs pédagogiques</h2>
+      <ul>
+        <li>Savoir quand et comment clôturer un appel efficacement</li>
+        <li>Créer un sentiment d’urgence et de confiance pour enclencher le dépôt</li>
+        <li>Utiliser des techniques de persuasion pour faciliter l'engagement immédiat</li>
+      </ul>
+    </section>
+
+    <section class="content">
+      <h2>🧠 Qu’est-ce que le closing ?</h2>
+      <p>Le closing, c’est le moment où tu transformes une intention floue en une action concrète : <strong>le dépôt minimum de 250€</strong>. C’est le moment où le client passe d’observateur à investisseur.</p>
+      <p>Un bon closing ne se force pas : il se construit en confiance, avec les bons leviers. C’est toi qui dois garder le contrôle jusqu’à la toute dernière étape.</p>
+    </section>
+
+    <section>
+      <h2>🔑 Techniques de closing puissantes</h2>
+      <ul>
+        <li><strong>Principe d'engagement :</strong> “Vous avez déjà pris le temps de simuler. Il ne reste plus qu’à valider.”</li>
+        <li><strong>Effet de rareté :</strong> “Les performances dépendent du moment. Ce que vous avez vu aujourd’hui peut changer demain.”</li>
+        <li><strong>Responsabilisation :</strong> “Le plus important, ce n’est pas le montant. C’est la décision de passer à l’action.”</li>
+        <li><strong>Accompagnement immédiat :</strong> “Je vous guide pas à pas, cela ne prend que 2 minutes.”</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💬 Scénarios de closing réalistes</h2>
+
+      <div class="scenario">
+        <strong style="color:#2e7d32;">Agent :</strong> “Vous avez vu la simulation, vous comprenez le principe. On passe au réel ?”<br />
+        <strong style="color:#d32f2f;">Client :</strong> “Oui, mais je veux être sûr.”<br />
+        <strong style="color:#2e7d32;">Agent :</strong> “Et c’est pour ça qu’on démarre petit. 250€, c’est la base. Vous testez, vous observez. Aucun engagement long terme. On y va ?”<br />
+        <strong style="color:#d32f2f;">Client :</strong> “D’accord.”<br />
+        <strong style="color:#2e7d32;">Agent :</strong> “Parfait. Je vous envoie le lien de dépôt et je reste avec vous.”<br />
+      </div>
+
+      <div class="scenario">
+        <strong style="color:#2e7d32;">Agent :</strong> “Si vous attendez encore, vous resterez dans la même situation. Faites ce premier pas maintenant. Je vous aide.”<br />
+        <strong style="color:#d32f2f;">Client :</strong> “Ok, allons-y.”<br />
+        <strong style="color:#2e7d32;">Agent :</strong> “Excellente décision. Je vous accompagne.”<br />
+      </div>
+    </section>
+
+    <section>
+      <h2>🚀 Script de fermeture à utiliser</h2>
+      <p><strong>“Maintenant que vous avez tout vu, on passe à l’essentiel. Le dépôt se fait en 2 minutes, je suis avec vous. On le fait ensemble maintenant ?”</strong></p>
+    </section>
+
+    <section>
+      <h2>⚠️ Erreurs à éviter</h2>
+      <ul>
+        <li>Demander “Est-ce que vous voulez déposer ?” ❌</li>
+        <li>Attendre que le client fasse le premier pas ❌</li>
+        <li>Laisser l’appel se terminer sans proposition claire ❌</li>
+      </ul>
+    </section>
+
+    <section class="quiz">
+      <h2>📝 Quiz de validation</h2>
+      <form id="quizForm">
+        <p>1. Quand faut-il proposer le dépôt ?</p>
+        <label><input type="radio" name="q1" value="a"> Seulement si le client le demande</label>
+        <label><input type="radio" name="q1" value="b"> Dès que le besoin est validé et la confiance établie</label>
+        <label><input type="radio" name="q1" value="c"> À la fin de l’appel, timidement</label>
+
+        <p>2. Quelle est la phrase de closing correcte ?</p>
+        <label><input type="radio" name="q2" value="a"> “Vous voulez peut-être réfléchir ?”</label>
+        <label><input type="radio" name="q2" value="b"> “On le fait ensemble maintenant, je vous accompagne.”</label>
+        <label><input type="radio" name="q2" value="c"> “Si vous préférez, je peux vous rappeler dans quelques jours.”</label>
+
+        <p>3. Quel est le bon état d’esprit du closer ?</p>
+        <label><input type="radio" name="q3" value="a"> Être dans l’attente</label>
+        <label><input type="radio" name="q3" value="b"> Prendre le contrôle avec confiance</label>
+        <label><input type="radio" name="q3" value="c"> Laisser parler le client sans intervenir</label>
+
+        <button type="button" onclick="validateQuiz()">Valider</button>
+      </form>
+      <div id="result"></div>
+      <button onclick="location.href='lesson6.html'">➡️ Passer à la leçon suivante</button>
+    </section>
+  </div>
+
+  <script>
+    function validateQuiz() {
+      const answers = { q1: 'b', q2: 'b', q3: 'b' };
+      let score = 0;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) score++;
+      }
+      document.getElementById('result').innerHTML = `<p><strong>Score : ${score}/3</strong></p>`;
+    }
+
+    const userName = localStorage.getItem('studentName');
+    if (userName) {
+      document.getElementById('userNameDisplay').textContent = `👋 Bonjour ${userName}, bienvenue dans la leçon 5.`;
+    }
+  </script>
+</body>
+</html>
